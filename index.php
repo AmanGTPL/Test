@@ -1,3 +1,18 @@
+<?php
+session_start();
+?>
+<?php
+// set cookies
+// $cookie_name = "user";
+// $cookie_value = "john Doe";
+// setcookie($cookie_name, $cookie_value, time()+(86400*30), "/");
+?>
+
+<?php
+// delete cookies
+// setcookie("user", "", time() - 3600);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -296,6 +311,89 @@
 		  ?>
 		  <!--------------------------------------------------------------------------------------------->
 		  <!-- part 1 complete -->
+
+		  <!-- <!DOCTYPE html>
+		  <html lang="en">
+		  <head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Document</title>
+		  </head>
+		  <body>
+			<?php 
+			//include 'menu.php'; 
+			?>
+			<h1>We nee toadjust the space</h1>
+			<p>we need to change the space</p>
+			<p>please fill this!</p>
+			<?php 
+			//require 'forms.php'; 
+			?>
+			<?php //require 'text.php';
+			//echo 'here is the text'.$text
+			?>
+		  </body>
+		  </html> -->
+		  <!-- ------------------------------------------------------------------------------------------- -->
+		   <!-- <!DOCTYPE html>
+		   <html lang="en">
+		   <head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Document</title>
+		   </head>
+		   <body>
+			<form action="upload.php" method="POST" enctype="multipart/form-data">
+				Select image to upload:
+				<input type="file" name="fileToUpload" id="fileToUpload">
+				<input type="submit" value="Upload Image" name="submit">
+			</form>
+		   </body>
+		   </html> -->
+
+		   <!-- ----------------------------------------------------------------------------------------------- -->
+			
+			
+			<?php
+			// if(isset($_COOKIE[$cookie_name])){
+			// 	echo "Cookie named ".$cookie_name. " is not set! <br>";
+			// }
+			// else{
+			// 	echo "Cookie ".$cookie_name. " is set!<br>";
+			// 	echo "Value is: ".$_COOKIE[$cookie_name];
+			// }
+			?>
+
+			<?php
+			// setcookie("test_cookie", "test", time()-3600, '/');
+			?>
+			<?php
+			// if(count($_COOKIE)>0){
+			// 	echo "cookies are enable!";
+			// }
+			// else{
+			// 	echo "cookies are disable";
+			// }
+			?>
+
+			<!-- ------------------------------------------------------------------------------------------- -->
+			<?php 
+			// $_SESSION["favColor"]="green";
+			// $_SESSION["favanimal"]="cat";
+			// echo "session variable are set.";
+			?>
+			<!-- ---------------------------------------------------------------------------------------------- -->
+
+			<?php
+			// session_unset();
+			// session_destroy();
+			?>
+
+			
+
+
+
+				
 </body>
 </html>
 

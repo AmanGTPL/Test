@@ -1,4 +1,5 @@
 <?php
+session_start();
 $nameErr=$emailErr=$genderErr=$websiteErr="";
 $name=$email=$gender=$comment=$website="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -71,7 +72,7 @@ function test_input($data){
 		Name: <input type="text" name="name"> 
 		<span class="error">*<?php echo $nameErr; ?> </span>
 		<br>
-		Email: <input type="text" name="email"> 
+		Email: <input type="email" name="email"> 
 		<span class="error">*<?php echo $emailErr; ?> </span>
 		<br>
 		Website: <input type="text" name="website"> 
@@ -99,6 +100,12 @@ function test_input($data){
 	echo $comment;
 	echo "<br>";
 	echo $gender;
+	?>
+
+	<?php
+	// echo $_SESSION["favColor"];
+	// echo "<br>";
+	// echo $_SESSION["favanimal"];
 	?>
 </body>
 </html>
