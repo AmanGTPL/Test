@@ -388,12 +388,10 @@ session_start();
 			// session_unset();
 			// session_destroy();
 			?>
+			<!-- part 2 complete -->
+			 
 
-			
-
-
-
-				
+	
 </body>
 </html>
 
