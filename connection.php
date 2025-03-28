@@ -1,18 +1,69 @@
 <?php
 // ------------------------Connection start-----------------------------------
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "testdb";
+// $dbhost = "localhost";
+// $dbuser = "root";
+// $dbpass = "";
+// $dbname = "cruddb";
 
-$conn = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
+// $conn = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 
-if($conn->connect_error){
-	die ("Connection Failed: ".$conn->connect_error);
+// if($conn->connect_error){
+// 	die ("Connection Failed: ".$conn->connect_error);
+// }
+// else{
+// 	echo "database connected successfully <br>";
+// }
+
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+
+try{
+	$conn = new PDO("mysql:host=$host;dbname=testdb", $user, $pass);
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	echo "Connection Successfully";
+}catch(PDOException $e){
+	echo "Connection Failed: ". $e->getMessage();
 }
-else{
-	echo "database connected successfully <br>";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // -------------------------Create Database-------------------------------
 // $sql = "CREATE DATABASE  TestDB";
@@ -129,5 +180,5 @@ else{
 // else{
 // echo "Error deleting record: ".$conn->error;	
 // }
-$conn->close();
+
 ?>

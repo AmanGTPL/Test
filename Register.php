@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	if(empty($error)){
 		$stmt = $conn->prepare("INSERT INTO users (name, email, phone, password) VALUES (?,?,?,?)");
-		$stmt->bind_param("ssss",$name,$email,$phone,$password);
+		$stmt->bind_param("ssss",$name,$email,$phone,$password);	
 		if($stmt->execute()){
 			$success="*User is Registered Sucessfully";
 		}
@@ -69,9 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$error[]="*Something went wrong. Please try again.";
 		}
 	}
-	
-
-
+	$conn->close();
 }
 ?>
 <!DOCTYPE html>
